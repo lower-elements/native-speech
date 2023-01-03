@@ -4,4 +4,4 @@ from .base_speaker import BaseSpeaker
 
 match sys.platform:
     case "linux": from .speech_dispatcher import Speaker
-    case other: raise Warning(f"Unsupported platform: {other}")
+    case other: raise RuntimeError(f"Unsupported platform: {other}")
