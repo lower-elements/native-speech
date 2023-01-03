@@ -71,7 +71,6 @@ class BaseSpeaker(ABC):
         return False
 
     @property
-    @abstractmethod
     def rate(self) -> float:
         """
         Get the current speech rate.
@@ -80,10 +79,9 @@ class BaseSpeaker(ABC):
 
         If the implementation does not support this feature, it must return 0.5, indicating an average rate.
         """
-        pass
+        return 0.5
 
     @rate.setter
-    @abstractmethod
     def rate(self, val: float):
         """
         Set the speech rate.
@@ -103,7 +101,6 @@ class BaseSpeaker(ABC):
         return False
 
     @property
-    @abstractmethod
     def pitch(self) -> float:
         """
         Get the current speech pitch.
@@ -112,10 +109,9 @@ class BaseSpeaker(ABC):
 
         If the implementation does not support this feature, it must return 0.5, indicating an average pitch.
         """
-        pass
+        return 0.5
 
     @pitch.setter
-    @abstractmethod
     def pitch(self, val: float):
         """
         Set the speech pitch.
@@ -135,7 +131,6 @@ class BaseSpeaker(ABC):
         return False
 
     @property
-    @abstractmethod
     def volume(self) -> float:
         """
         Get the current speech volume.
@@ -144,10 +139,9 @@ class BaseSpeaker(ABC):
 
         If the implementation does not support this feature, it must return 1.0, indicating full volume.
         """
-        pass
+        return 1.0
 
     @volume.setter
-    @abstractmethod
     def volume(self, val: float):
         """
         Set the speech volume.
