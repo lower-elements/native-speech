@@ -7,7 +7,7 @@ clamp = lambda x, min, max: min if x < min else max if x > max else x
 class Speaker(BaseSpeaker):
     __slots__ = ["_speaker"]
 
-    def __init__(self, name: str):
+    def __init__(self, *, name: str, **kwargs):
         self._speaker = speechd.Speaker(name)
 
     def speak(self, text: str, interrupt: bool = True):

@@ -11,8 +11,13 @@ class BaseSpeaker(ABC):
 
     __slots__ = []
 
-    def __init__(self, program_name: str):
-        "Initialize the Speaker object."
+    def __init__(self, **kwargs):
+        """
+        Initialize the Speaker object.
+
+        All implementations must accept arbitrary keyword arguments, and only take action based on the arguments they
+        support.
+        """
         pass
 
     @abstractmethod
