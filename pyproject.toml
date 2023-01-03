@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "native-speech"
 version = "0.1.0"
-description = ""
+description = "A cross-platform text-to-speech library that uses the system's native TTS facility"
 authors = ["Michael Connor Buchan <mikey@blindcomputing.org>"]
 license = "MIT"
 readme = "README.md"
@@ -9,6 +9,7 @@ packages = [{include = "native_speech"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+cytolk = {version = "^0.1.12", platform = "win32"}
 
 
 [build-system]
