@@ -17,5 +17,11 @@ class Speaker(BaseSpeaker):
     def speak(self, text: str, interrupt: bool = True):
         cytolk.output(text, interrupt)
 
+    def speak_char(self, character: str, interrupt: bool = True):
+        cytolk.output(character, interrupt)
+
+    def speak_key(self, key: str, interrupt: bool = True):
+        cytolk.output(key, interrupt)
+
     def stop(self):
         cytolk.silence()
