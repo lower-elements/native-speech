@@ -26,6 +26,10 @@ class Speaker(BaseSpeaker):
         self._speaker.cancel()
 
     @property
+    def supports_rate(self) -> bool:
+        return True
+
+    @property
     def rate(self) -> float:
         return (int(self._speaker.get_rate()) + 100) / 200.0
 
@@ -35,6 +39,10 @@ class Speaker(BaseSpeaker):
         self._speaker.set_rate(int((val * 200) - 100))
 
     @property
+    def supports_pitch(self) -> bool:
+        return True
+
+    @property
     def pitch(self) -> float:
         return (int(self._speaker.get_pitch()) + 100) / 200.0
 
@@ -42,6 +50,10 @@ class Speaker(BaseSpeaker):
     def pitch(self, val: float):
         val = clamp(val, 0.0, 1.0)
         self._speaker.set_pitch(int((val * 200) - 100))
+
+    @property
+    def supports_volume(self) -> bool:
+        return True
 
     @property
     def volume(self) -> float:

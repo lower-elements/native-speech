@@ -23,6 +23,10 @@ class BaseSpeaker(ABC):
         pass
 
     @property
+    def supports_rate(self) -> bool:
+        return False
+
+    @property
     @abstractmethod
     def rate(self) -> float:
         pass
@@ -33,6 +37,10 @@ class BaseSpeaker(ABC):
         pass
 
     @property
+    def supports_pitch(self) -> bool:
+        return False
+
+    @property
     @abstractmethod
     def pitch(self) -> float:
         pass
@@ -41,6 +49,10 @@ class BaseSpeaker(ABC):
     @abstractmethod
     def pitch(self, val: float):
         pass
+
+    @property
+    def supports_volume(self) -> bool:
+        return False
 
     @property
     @abstractmethod
