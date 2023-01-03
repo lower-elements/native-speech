@@ -10,6 +10,7 @@ packages = [{include = "native_speech"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 cytolk = {version = "^0.1.12", platform = "win32"}
+pyobjc = {version = "^9.0.1", platform = "darwin"}
 
 
 [build-system]
