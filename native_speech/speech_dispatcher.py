@@ -1,8 +1,10 @@
 import speechd
 
+from .base_speaker import BaseSpeaker
+
 clamp = lambda x, min, max: min if x < min else max if x > max else x
 
-class Speaker:
+class Speaker(BaseSpeaker):
     __slots__ = ["_speaker"]
 
     def __init__(self, name: str):
