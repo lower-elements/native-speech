@@ -6,8 +6,8 @@ from .base_speaker import BaseSpeaker
 class Speaker(BaseSpeaker):
     __slots__ = ["_speaker"]
 
-    def __init__(self, *, name: str, **kwargs):
-        self._speaker = speechd.Speaker(name)
+    def __init__(self, *, program_name: str, **kwargs):
+        self._speaker = speechd.Speaker(program_name)
 
     def speak(self, text: str, interrupt: bool = True):
         if interrupt: self._speaker.cancel()
